@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Coursework Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #2d2f36;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0 20px 0;
+    }
+    .profile-pic {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #555;
+      margin-bottom: 10px;
+    }
+    .profile-info {
+      text-align: center;
+      font-size: 0.9em;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .sidebar li:hover {
+      background-color: #3e3f47;
+    }
+    .sidebar li i {
+      margin-right: 10px;
+    }
+    .main {
+      flex: 1;
+      background-color: white;
+      overflow-y: auto;
+      transition: all 0.3s ease-in-out;
+    }
+    .topbar {
+      background-color: #4ec1ac;
+      padding: 15px 25px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar input {
+      padding: 7px;
+      width: 250px;
+      border: none;
+      border-radius: 4px;
+    }
+    .dashboard-grid {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+    .dash-card {
+      flex: 1 1 250px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      min-width: 250px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .dash-card img, .dash-card i {
+      font-size: 2rem;
+      color: #4ec1ac;
+    }
+    .dash-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .dash-info h2 {
+      font-size: 1.5rem;
+    }
+    .dash-info p {
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="profile-section">
+      <div class="profile-pic"></div>
+      <div class="profile-info">
+        <strong>Student Name</strong><br />
+        2025222333 - 4A
+      </div>
+    </div>
+    <ul>
+      <li style="background:#3e3f47"><i class="fas fa-tachometer-alt"></i> Home</li>
+      <li onclick="location.href='checklist.html'"><i class="fas fa-book"></i> Checklist</li>
+      <li><i class="fas fa-users"></i> myCommunity</li>
+      <li><i class="fas fa-clipboard"></i> Evaluation</li>
+      <li><i class="fas fa-cog"></i> Setting</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <div class="right-icons">
+        <i class="fas fa-bell"></i>
+      </div>
+    </div>
+    <div class="dashboard-grid">
+      <div class="dash-card">
+        <i class="fas fa-graduation-cap"></i>
+        <div class="dash-info">
+          <h2>2</h2>
+          <p>COURSE TO DO</p>
+        </div>
+      </div>
+      <div class="dash-card">
+        <i class="fas fa-chart-line"></i>
+        <div class="dash-info">
+          <h2>2</h2>
+          <p>IN PROGRESS</p>
+        </div>
+      </div>
+      <div class="dash-card">
+        <i class="fas fa-award"></i>
+        <div class="dash-info">
+          <h2>0</h2>
+          <p>COMPLETED</p>
+        </div>
+      </div>
+      <div class="dash-card">
+        <i class="fas fa-certificate"></i>
+        <div class="dash-info">
+          <h2>CERTIFICATES (0)</h2>
+          <p>Currently, NO certificate issued</p>
+        </div>
+      </div>
+      <div class="dash-card">
+        <i class="fas fa-heart"></i>
+        <div class="dash-info">
+          <h2>0 Like</h2>
+        </div>
+      </div>
+      <div class="dash-card">
+        <i class="fas fa-star"></i>
+        <div class="dash-info">
+          <h2>BADGES</h2>
+          <p>Your latest achievements</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Coursework Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #2d2f36;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+    }
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0 20px 0;
+    }
+    .profile-pic {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #555;
+      margin-bottom: 10px;
+    }
+    .profile-info {
+      text-align: center;
+      font-size: 0.9em;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .sidebar li:hover {
+      background-color: #3e3f47;
+    }
+    .sidebar li i {
+      margin-right: 10px;
+    }
+    .main {
+      flex: 1;
+      background-color: white;
+      overflow-y: auto;
+    }
+    .topbar {
+      background-color: #4ec1ac;
+      padding: 15px 25px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar input {
+      padding: 7px;
+      width: 250px;
+      border: none;
+      border-radius: 4px;
+    }
+    .topbar .right-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .topbar .right-icons i {
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .course-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .course-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .course-card .content {
+      padding: 15px;
+    }
+    .course-card h4 {
+      font-size: 1em;
+      margin-bottom: 8px;
+    }
+    .course-card p {
+      font-size: 0.9em;
+      color: #666;
+    }
+    .course-card .status {
+      margin-top: 10px;
+      font-size: 0.8em;
+    }
+    .status span {
+      background-color: orange;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 10px;
+    }
+    .course-card .view-btn {
+      margin-top: 10px;
+      padding: 7px 14px;
+      background-color: #4ec1ac;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .course-card .view-btn:hover {
+      background-color: #3ba893;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="profile-section">
+      <div class="profile-pic"></div>
+      <div class="profile-info">
+        <strong>Student Name</strong><br />
+        2025222333 - 4A
+      </div>
+    </div>
+    <ul>
+      <li onclick="location.href='home.html'"><i class="fas fa-tachometer-alt"></i> Home</li>
+      <li style="background:#3e3f47"><i class="fas fa-book"></i> Checklist</li>
+      <li><i class="fas fa-users"></i> myCommunity</li>
+      <li><i class="fas fa-clipboard"></i> Evaluation</li>
+      <li><i class="fas fa-cog"></i> Setting</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <div class="right-icons">
+        <i class="fas fa-bell"></i>
+      </div>
+    </div>
+    <div class="course-grid">
+      <div class="course-card">
+        <img src="IMG_20220421_184839-removebg-preview.png" alt="Course Banner" />
+        <div class="content">
+          <h4>CSC264 - INTRODUCTION TO WEB AND MOBILE...</h4>
+          <p>👥 1420 Students<br />
+          SuFO Status: <span>NOT OPEN YET</span>
+          </p>
+          <button class="view-btn">VIEW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
