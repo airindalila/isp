@@ -5,14 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Business Coursework Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  
   <style>
-    html, body, h1, h2, h3, h4, h5 {
-      font-family: "Raleway", sans-serif;
-    }
     * {
       box-sizing: border-box;
       margin: 0;
@@ -36,7 +29,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 10px 0 20px;
+      padding: 10px 0 20px 0;
     }
     .profile-pic {
       width: 70px;
@@ -69,6 +62,7 @@
       flex: 1;
       background-color: white;
       overflow-y: auto;
+      transition: all 0.3s ease-in-out;
     }
     .topbar {
       background-color: #764ec1;
@@ -78,41 +72,50 @@
       justify-content: space-between;
       align-items: center;
     }
-    .dashboard {
-      padding: 20px;
+    .topbar input {
+      padding: 7px;
+      width: 250px;
+      border: none;
+      border-radius: 4px;
     }
-    .dashboard-header {
-      padding: 20px;
-    }
-    .dashboard-header h5 {
-      font-size: 1.2rem;
-    }
-    .dashboard-cards {
+    .dashboard-grid {
       display: flex;
       flex-wrap: wrap;
+      padding: 20px;
       gap: 20px;
-      padding: 0 20px 20px;
     }
-    .card {
-      flex: 1 1 200px;
+    .dash-card {
+      flex: 1 1 250px;
+      border: 1px solid #ccc;
       border-radius: 10px;
-      color: white;
+      background: #fff;
       padding: 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 20px;
+      min-width: 250px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .card i {
-      font-size: 3rem;
-      opacity: 0.7;
+    .dash-card img, .dash-card i {
+      font-size: 2rem;
+      color: #4ec1ac;
     }
-    .card h3 {
-      margin: 0;
+    .dash-info {
+      display: flex;
+      flex-direction: column;
     }
-    .card-red { background-color: #f44336; }
-    .card-blue { background-color: #2196F3; }
-    .card-teal { background-color: #009688; }
-    .card-orange { background-color: #ff9800; }
+    .dash-info h2 {
+      font-size: 1.5rem;
+    }
+    .dash-info p {
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
@@ -125,56 +128,21 @@
       </div>
     </div>
     <ul>
-      <li style="background:#3e3f47"><i class="fas fa-tachometer-alt"></i> Home</li>
+      <li onclick="location.href='home.html'"><i class="fas fa-tachometer-alt"></i> Home</li>
       <li onclick="location.href='checklist.html'"><i class="fas fa-book"></i> Checklist</li>
-      <li onclick="location.href='evaluation.html'"><i class="fas fa-users"></i> Evaluation</li>
+      <li style="background:#3e3f47"><i class="fas fa-users"></i> Evaluation</li>
       <li onclick="location.href='setting.html'"><i class="fas fa-clipboard"></i> Setting</li>
     </ul>
   </div>
-
   <div class="main">
     <div class="topbar">
       <div class="right-icons">
         <i class="fas fa-bell"></i>
       </div>
     </div>
-
-    <div class="dashboard">
-      <div class="dashboard-header">
-        <h5><b><i class="fas fa-tachometer-alt"></i> My Dashboard</b></h5>
-      </div>
-
-      <div class="dashboard-cards">
-        <div class="card card-red">
-          <div>
-            <h3>52</h3>
-            <p>Task</p>
-          </div>
-          <i class="fa fa-comment"></i>
-        </div>
-        <div class="card card-blue">
-          <div>
-            <h3>99</h3>
-            <p>Uploaded draft</p>
-          </div>
-          <i class="fa fa-eye"></i>
-        </div>
-        <div class="card card-teal">
-          <div>
-            <h3>23</h3>
-            <p>Classmate</p>
-          </div>
-          <i class="fa fa-share-alt"></i>
-        </div>
-        <div class="card card-orange">
-          <div>
-            <h3>50</h3>
-            <p>Total user</p>
-          </div>
-          <i class="fa fa-users"></i>
-        </div>
       </div>
     </div>
   </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
